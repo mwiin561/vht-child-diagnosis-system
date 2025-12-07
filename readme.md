@@ -30,8 +30,7 @@ Combines both approaches:
 
 Final Score = 0.7 × ML_probability + 0.3 × KG_reasoning_score
 
-markdown
-Copy code
+
 
 Provides:
 - Final hybrid diagnosis  
@@ -55,7 +54,7 @@ Provides:
 
 Example Markdown:
 
-```markdown
+
 ![System Architecture](Architecture_diagram.png)
 📄 Requirements
 The project requires Python libraries for:
@@ -70,23 +69,5 @@ Streamlit UI deployment
 
 Cloudflare tunneling (for Colab deployment)
 
-Below is the full requirements.txt content you should add to your repository.
 
-📦 requirements.txt
-Copy the block below into a file named requirements.txt:
 
-ini
-Copy code
-streamlit==1.33.0
-pandas==1.5.3
-numpy==1.23.5
-scikit-learn==1.2.2
-networkx==3.1
-joblib==1.3.2
-regex==2023.10.3
-langdetect==1.0.9
-cloudflared==0.4.0
-##Notes:
-cloudflared is optional and only needed when running Streamlit in Colab.
-
-Versions are chosen for maximum compatibility with Colab and local environments.
