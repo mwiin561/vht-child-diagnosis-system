@@ -1,0 +1,467 @@
+[
+  {
+    "text": "Omwana alina omusujja, akyawa okukosora era afuuya mangu.",
+    "nlp": {
+      "symptoms": {
+        "fever": true,
+        "cough": true,
+        "fast_breathing": true,
+        "difficulty_breathing": false,
+        "diarrhea": false,
+        "vomiting": false,
+        "blood_in_stool": false,
+        "weakness": false,
+        "poor_feeding": false,
+        "convulsions": false
+      },
+      "metadata": {
+        "age_years": null,
+        "duration_days": null
+      },
+      "cleaned_text": "omwana alina omusujja akyawa okukosora era afuuya mangu"
+    },
+    "classifier": {
+      "prediction": "pneumonia",
+      "probabilities": {
+        "diarrhea": 0.0,
+        "malaria": 0.0,
+        "pneumonia": 1.0
+      }
+    },
+    "kg": {
+      "scores": {
+        "pneumonia": 2.0,
+        "malaria": 0.8,
+        "diarrhea": 0.3
+      },
+      "danger_signs": [],
+      "risk": "moderate_risk",
+      "explanations": [
+        "fever → pneumonia (weight 0.4)",
+        "fever → malaria (weight 0.8)",
+        "fever → diarrhea (weight 0.3)",
+        "cough → pneumonia (weight 0.7)",
+        "fast_breathing → pneumonia (weight 0.9)"
+      ]
+    },
+    "hybrid": {
+      "final_prediction": "pneumonia",
+      "risk_level": "moderate_risk",
+      "explanation": [
+        "Classification Probabilities:",
+        " - diarrhea: 0.0%",
+        " - malaria: 0.0%",
+        " - pneumonia: 100.0%",
+        "\nKnowledge Graph Reasoning:",
+        " - fever → pneumonia (weight 0.4)",
+        " - fever → malaria (weight 0.8)",
+        " - fever → diarrhea (weight 0.3)",
+        " - cough → pneumonia (weight 0.7)",
+        " - fast_breathing → pneumonia (weight 0.9)",
+        "\nHybrid Final Scores:",
+        " - pneumonia: 1.300",
+        " - malaria: 0.240",
+        " - diarrhea: 0.090",
+        "\nFinal Decision → PNEUMONIA",
+        "Risk Level → MODERATE_RISK"
+      ]
+    },
+    "explanation_readable": [
+      "Classifier top prediction: pneumonia (100.0% confidence)",
+      "Classifier probabilities:",
+      " - diarrhea: 0.0%",
+      " - malaria: 0.0%",
+      " - pneumonia: 100.0%",
+      "\nKnowledge-graph rules triggered:",
+      " - fever → pneumonia (weight 0.4)",
+      " - fever → malaria (weight 0.8)",
+      " - fever → diarrhea (weight 0.3)",
+      " - cough → pneumonia (weight 0.7)",
+      " - fast_breathing → pneumonia (weight 0.9)",
+      "Risk level: moderate_risk",
+      "\nDetected symptoms: fever, cough, fast_breathing",
+      "Metadata: age=None, duration_days=None"
+    ],
+    "feature_vector": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      null,
+      null
+    ]
+  },
+  {
+    "text": "Child has fever and vomiting for 2 days, not coughing.",
+    "nlp": {
+      "symptoms": {
+        "fever": true,
+        "cough": false,
+        "fast_breathing": false,
+        "difficulty_breathing": false,
+        "diarrhea": false,
+        "vomiting": true,
+        "blood_in_stool": false,
+        "weakness": false,
+        "poor_feeding": false,
+        "convulsions": false
+      },
+      "metadata": {
+        "age_years": null,
+        "duration_days": 2
+      },
+      "cleaned_text": "child has fever and vomiting for 2 days not coughing"
+    },
+    "classifier": {
+      "prediction": "malaria",
+      "probabilities": {
+        "diarrhea": 0.005,
+        "malaria": 0.99,
+        "pneumonia": 0.005
+      }
+    },
+    "kg": {
+      "scores": {
+        "pneumonia": 0.4,
+        "malaria": 1.4,
+        "diarrhea": 0.8
+      },
+      "danger_signs": [],
+      "risk": "moderate_risk",
+      "explanations": [
+        "fever → pneumonia (weight 0.4)",
+        "fever → malaria (weight 0.8)",
+        "fever → diarrhea (weight 0.3)",
+        "vomiting → malaria (weight 0.6)",
+        "vomiting → diarrhea (weight 0.5)"
+      ]
+    },
+    "hybrid": {
+      "final_prediction": "malaria",
+      "risk_level": "moderate_risk",
+      "explanation": [
+        "Classification Probabilities:",
+        " - diarrhea: 0.5%",
+        " - malaria: 99.0%",
+        " - pneumonia: 0.5%",
+        "\nKnowledge Graph Reasoning:",
+        " - fever → pneumonia (weight 0.4)",
+        " - fever → malaria (weight 0.8)",
+        " - fever → diarrhea (weight 0.3)",
+        " - vomiting → malaria (weight 0.6)",
+        " - vomiting → diarrhea (weight 0.5)",
+        "\nHybrid Final Scores:",
+        " - pneumonia: 0.123",
+        " - malaria: 1.113",
+        " - diarrhea: 0.243",
+        "\nFinal Decision → MALARIA",
+        "Risk Level → MODERATE_RISK"
+      ]
+    },
+    "explanation_readable": [
+      "Classifier top prediction: malaria (99.0% confidence)",
+      "Classifier probabilities:",
+      " - diarrhea: 0.5%",
+      " - malaria: 99.0%",
+      " - pneumonia: 0.5%",
+      "\nKnowledge-graph rules triggered:",
+      " - fever → pneumonia (weight 0.4)",
+      " - fever → malaria (weight 0.8)",
+      " - fever → diarrhea (weight 0.3)",
+      " - vomiting → malaria (weight 0.6)",
+      " - vomiting → diarrhea (weight 0.5)",
+      "Risk level: moderate_risk",
+      "\nDetected symptoms: fever, vomiting",
+      "Metadata: age=None, duration_days=2"
+    ],
+    "feature_vector": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      null,
+      2
+    ]
+  },
+  {
+    "text": "3 year old with watery stool and vomiting for 1 day",
+    "nlp": {
+      "symptoms": {
+        "fever": false,
+        "cough": false,
+        "fast_breathing": false,
+        "difficulty_breathing": false,
+        "diarrhea": true,
+        "vomiting": true,
+        "blood_in_stool": false,
+        "weakness": false,
+        "poor_feeding": false,
+        "convulsions": false
+      },
+      "metadata": {
+        "age_years": 3,
+        "duration_days": 1
+      },
+      "cleaned_text": "3 year old with watery stool and vomiting for 1 day"
+    },
+    "classifier": {
+      "prediction": "diarrhea",
+      "probabilities": {
+        "diarrhea": 1.0,
+        "malaria": 0.0,
+        "pneumonia": 0.0
+      }
+    },
+    "kg": {
+      "scores": {
+        "pneumonia": 0,
+        "malaria": 0.6,
+        "diarrhea": 1.4
+      },
+      "danger_signs": [],
+      "risk": "moderate_risk",
+      "explanations": [
+        "diarrhea → diarrhea (weight 0.9)",
+        "vomiting → malaria (weight 0.6)",
+        "vomiting → diarrhea (weight 0.5)"
+      ]
+    },
+    "hybrid": {
+      "final_prediction": "diarrhea",
+      "risk_level": "moderate_risk",
+      "explanation": [
+        "Classification Probabilities:",
+        " - diarrhea: 100.0%",
+        " - malaria: 0.0%",
+        " - pneumonia: 0.0%",
+        "\nKnowledge Graph Reasoning:",
+        " - diarrhea → diarrhea (weight 0.9)",
+        " - vomiting → malaria (weight 0.6)",
+        " - vomiting → diarrhea (weight 0.5)",
+        "\nHybrid Final Scores:",
+        " - pneumonia: 0.000",
+        " - malaria: 0.180",
+        " - diarrhea: 1.120",
+        "\nFinal Decision → DIARRHEA",
+        "Risk Level → MODERATE_RISK"
+      ]
+    },
+    "explanation_readable": [
+      "Classifier top prediction: diarrhea (100.0% confidence)",
+      "Classifier probabilities:",
+      " - diarrhea: 100.0%",
+      " - malaria: 0.0%",
+      " - pneumonia: 0.0%",
+      "\nKnowledge-graph rules triggered:",
+      " - diarrhea → diarrhea (weight 0.9)",
+      " - vomiting → malaria (weight 0.6)",
+      " - vomiting → diarrhea (weight 0.5)",
+      "Risk level: moderate_risk",
+      "\nDetected symptoms: diarrhea, vomiting",
+      "Metadata: age=3, duration_days=1"
+    ],
+    "feature_vector": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      3,
+      1
+    ]
+  },
+  {
+    "text": "No cough, no fast breathing, but high fever and vomiting",
+    "nlp": {
+      "symptoms": {
+        "fever": true,
+        "cough": false,
+        "fast_breathing": false,
+        "difficulty_breathing": false,
+        "diarrhea": false,
+        "vomiting": true,
+        "blood_in_stool": false,
+        "weakness": false,
+        "poor_feeding": false,
+        "convulsions": false
+      },
+      "metadata": {
+        "age_years": null,
+        "duration_days": null
+      },
+      "cleaned_text": "no cough no fast breathing but high fever and vomiting"
+    },
+    "classifier": {
+      "prediction": "malaria",
+      "probabilities": {
+        "diarrhea": 0.0,
+        "malaria": 0.995,
+        "pneumonia": 0.005
+      }
+    },
+    "kg": {
+      "scores": {
+        "pneumonia": 0.4,
+        "malaria": 1.4,
+        "diarrhea": 0.8
+      },
+      "danger_signs": [],
+      "risk": "moderate_risk",
+      "explanations": [
+        "fever → pneumonia (weight 0.4)",
+        "fever → malaria (weight 0.8)",
+        "fever → diarrhea (weight 0.3)",
+        "vomiting → malaria (weight 0.6)",
+        "vomiting → diarrhea (weight 0.5)"
+      ]
+    },
+    "hybrid": {
+      "final_prediction": "malaria",
+      "risk_level": "moderate_risk",
+      "explanation": [
+        "Classification Probabilities:",
+        " - diarrhea: 0.0%",
+        " - malaria: 99.5%",
+        " - pneumonia: 0.5%",
+        "\nKnowledge Graph Reasoning:",
+        " - fever → pneumonia (weight 0.4)",
+        " - fever → malaria (weight 0.8)",
+        " - fever → diarrhea (weight 0.3)",
+        " - vomiting → malaria (weight 0.6)",
+        " - vomiting → diarrhea (weight 0.5)",
+        "\nHybrid Final Scores:",
+        " - pneumonia: 0.123",
+        " - malaria: 1.117",
+        " - diarrhea: 0.240",
+        "\nFinal Decision → MALARIA",
+        "Risk Level → MODERATE_RISK"
+      ]
+    },
+    "explanation_readable": [
+      "Classifier top prediction: malaria (99.5% confidence)",
+      "Classifier probabilities:",
+      " - diarrhea: 0.0%",
+      " - malaria: 99.5%",
+      " - pneumonia: 0.5%",
+      "\nKnowledge-graph rules triggered:",
+      " - fever → pneumonia (weight 0.4)",
+      " - fever → malaria (weight 0.8)",
+      " - fever → diarrhea (weight 0.3)",
+      " - vomiting → malaria (weight 0.6)",
+      " - vomiting → diarrhea (weight 0.5)",
+      "Risk level: moderate_risk",
+      "\nDetected symptoms: fever, vomiting",
+      "Metadata: age=None, duration_days=None"
+    ],
+    "feature_vector": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      null,
+      null
+    ]
+  },
+  {
+    "text": "Child not feeding, very weak and vomiting everything",
+    "nlp": {
+      "symptoms": {
+        "fever": false,
+        "cough": false,
+        "fast_breathing": false,
+        "difficulty_breathing": false,
+        "diarrhea": false,
+        "vomiting": true,
+        "blood_in_stool": false,
+        "weakness": false,
+        "poor_feeding": false,
+        "convulsions": false
+      },
+      "metadata": {
+        "age_years": null,
+        "duration_days": null
+      },
+      "cleaned_text": "child not feeding very weak and vomiting everything"
+    },
+    "classifier": {
+      "prediction": "diarrhea",
+      "probabilities": {
+        "diarrhea": 0.45,
+        "malaria": 0.415,
+        "pneumonia": 0.135
+      }
+    },
+    "kg": {
+      "scores": {
+        "pneumonia": 0,
+        "malaria": 0.6,
+        "diarrhea": 0.5
+      },
+      "danger_signs": [],
+      "risk": "low_risk",
+      "explanations": [
+        "vomiting → malaria (weight 0.6)",
+        "vomiting → diarrhea (weight 0.5)"
+      ]
+    },
+    "hybrid": {
+      "final_prediction": "malaria",
+      "risk_level": "low_risk",
+      "explanation": [
+        "Classification Probabilities:",
+        " - diarrhea: 45.0%",
+        " - malaria: 41.5%",
+        " - pneumonia: 13.5%",
+        "\nKnowledge Graph Reasoning:",
+        " - vomiting → malaria (weight 0.6)",
+        " - vomiting → diarrhea (weight 0.5)",
+        "\nHybrid Final Scores:",
+        " - pneumonia: 0.095",
+        " - malaria: 0.470",
+        " - diarrhea: 0.465",
+        "\nFinal Decision → MALARIA",
+        "Risk Level → LOW_RISK"
+      ]
+    },
+    "explanation_readable": [
+      "Classifier top prediction: diarrhea (45.0% confidence)",
+      "Classifier probabilities:",
+      " - diarrhea: 45.0%",
+      " - malaria: 41.5%",
+      " - pneumonia: 13.5%",
+      "\nKnowledge-graph rules triggered:",
+      " - vomiting → malaria (weight 0.6)",
+      " - vomiting → diarrhea (weight 0.5)",
+      "Risk level: low_risk",
+      "\nDetected symptoms: vomiting",
+      "Metadata: age=None, duration_days=None"
+    ],
+    "feature_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      null,
+      null
+    ]
+  }
+]

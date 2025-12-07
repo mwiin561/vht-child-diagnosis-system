@@ -1,0 +1,72 @@
+{
+  "fever": [
+    "fever",
+    "omusujja",
+    "high temp",
+    "temperature",
+    "hot body",
+    "sujja"
+  ],
+  "cough": [
+    "cough",
+    "okukosora",
+    "kyokosola",
+    "severe cough"
+  ],
+  "fast_breathing": [
+    "fast breathing",
+    "rapid breathing",
+    "breathing fast",
+    "panting",
+    "gasping",
+    "struggling to breathe",
+    "okussa mangu",
+    "okussa mangu mangu",
+    "okussa waggulu",
+    "okussa waggulu waggulu",
+    "okukuba empumu mangu",
+    "okusikuta",
+    "afuuya",
+    "afuuya mangu"
+  ],
+  "difficulty_breathing": [
+    "difficulty breathing",
+    "hard breathing",
+    "chest indrawing",
+    "obuzibu okussa"
+  ],
+  "diarrhea": [
+    "diarrhea",
+    "diarrhoea",
+    "loose stool",
+    "okutata",
+    "watery stool"
+  ],
+  "vomiting": [
+    "vomiting",
+    "okusesema",
+    "vomit"
+  ],
+  "blood_in_stool": [
+    "blood in stool",
+    "bloody stool",
+    "omusaayi mu mata"
+  ],
+  "weakness": [
+    "weak",
+    "no strength",
+    "okuddirira",
+    "very weak"
+  ],
+  "poor_feeding": [
+    "poor feeding",
+    "not feeding",
+    "tayalya",
+    "not eating"
+  ],
+  "convulsions": [
+    "convulsions",
+    "fitting",
+    "okutemagana"
+  ]
+}
